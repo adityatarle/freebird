@@ -7,6 +7,7 @@ import {
 import { useUIStore } from '../state/uiStore'
 import { useAuthStore } from '../state/authStore'
 import TopHeader from '../components/TopHeader'
+import DesktopHeader from '../components/DesktopHeader'
 import Button from '../components/Button'
 import Card from '../components/Card'
 
@@ -87,8 +88,9 @@ const Settings = () => {
   return (
     <div className="min-h-screen">
       <TopHeader title="Settings" showBack />
+      <DesktopHeader title="Settings" />
       
-      <div className="p-4 space-y-6 max-w-md mx-auto">
+      <div className="p-4 space-y-6 max-w-md mx-auto lg:max-w-2xl lg:grid lg:grid-cols-2 lg:gap-6 lg:space-y-0">
         {/* Appearance */}
         <Card className="p-0">
           <div className="p-4 border-b border-base-200">

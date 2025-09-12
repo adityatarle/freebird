@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Heart, MapPin, Calendar, Trash2, Share } from 'lucide-react'
 import { useTravelStore } from '../state/travelStore'
 import TopHeader from '../components/TopHeader'
+import DesktopHeader from '../components/DesktopHeader'
 import Button from '../components/Button'
 import Card from '../components/Card'
 
@@ -109,9 +110,10 @@ const Wishlist = () => {
   return (
     <div className="min-h-screen">
       <TopHeader title="My Wishlist" />
+      <DesktopHeader title="My Wishlist" />
       
       {/* Tabs */}
-      <div className="sticky top-16 z-30 bg-base-100 border-b border-base-200">
+      <div className="sticky top-16 lg:top-20 z-30 bg-base-100 border-b border-base-200">
         <div className="flex">
           {tabs.map(tab => (
             <button

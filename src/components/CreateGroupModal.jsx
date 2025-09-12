@@ -135,7 +135,7 @@ const CreateGroupModal = () => {
 
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-      <Card className="w-full max-w-md max-h-[90vh] overflow-y-auto">
+      <Card className="w-full max-w-md lg:max-w-lg xl:max-w-xl max-h-[90vh] overflow-y-auto">
         {/* Header */}
         <div className="flex items-center justify-between p-4 border-b border-base-200">
           <h2 className="text-lg font-bold">Create Travel Group</h2>
@@ -317,7 +317,7 @@ const CreateGroupModal = () => {
 
               <div>
                 <label className="block text-sm font-medium mb-2">Activities (Select all that apply)</label>
-                <div className="grid grid-cols-2 gap-2">
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2">
                   {activities.map(activity => (
                     <label key={activity} className="flex items-center gap-2 cursor-pointer">
                       <input

@@ -3,6 +3,7 @@ import { useQuery } from '@tanstack/react-query'
 import { Search, Filter, MapPin } from 'lucide-react'
 import { fetchDestinations } from '../services/destinationsService'
 import TopHeader from '../components/TopHeader'
+import DesktopHeader from '../components/DesktopHeader'
 import DestinationCard from '../components/DestinationCard'
 import LoadingSpinner from '../components/LoadingSpinner'
 import Button from '../components/Button'
@@ -46,9 +47,10 @@ const Explore = () => {
   return (
     <div className="min-h-screen">
       <TopHeader title="Explore" />
+      <DesktopHeader title="Explore Destinations" />
       
       {/* Search Bar */}
-      <div className="sticky top-16 z-30 bg-base-100 border-b border-base-200 p-4">
+      <div className="sticky top-16 lg:top-20 z-30 bg-base-100 border-b border-base-200 p-4 lg:px-6">
         <form onSubmit={handleSearch} className="flex gap-2">
           <div className="flex-1 relative">
             <Search size={20} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-base-content/60" />
@@ -151,7 +153,7 @@ const Explore = () => {
                 </p>
               </div>
             ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 md:gap-6">
                 {destinations?.map((destination) => (
                   <DestinationCard
                     key={destination.id}

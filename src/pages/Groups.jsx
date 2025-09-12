@@ -5,6 +5,7 @@ import { fetchGroups, joinGroup } from '../services/groupsService'
 import { useUIStore } from '../state/uiStore'
 import { useTravelStore } from '../state/travelStore'
 import TopHeader from '../components/TopHeader'
+import DesktopHeader from '../components/DesktopHeader'
 import GroupCard from '../components/GroupCard'
 import LoadingSpinner from '../components/LoadingSpinner'
 import Button from '../components/Button'
@@ -63,9 +64,21 @@ const Groups = () => {
           </Button>
         }
       />
+      <DesktopHeader 
+        title="Travel Groups" 
+        actions={
+          <Button
+            variant="primary"
+            onClick={showCreateGroup}
+          >
+            <Plus size={16} className="mr-2" />
+            Create Group
+          </Button>
+        }
+      />
       
       {/* Tabs */}
-      <div className="sticky top-16 z-30 bg-base-100 border-b border-base-200">
+      <div className="sticky top-16 lg:top-20 z-30 bg-base-100 border-b border-base-200">
         <div className="flex">
           {tabs.map(tab => (
             <button
@@ -146,7 +159,7 @@ const Groups = () => {
                     </Button>
                   </div>
                 ) : (
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4 md:gap-6">
                     {groups?.map((group) => (
                       <GroupCard
                         key={group.id}
@@ -195,7 +208,7 @@ const Groups = () => {
               </div>
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4 md:gap-6">
               {myGroups.map((group) => (
                 <GroupCard
                   key={group.id}

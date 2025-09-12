@@ -4,6 +4,7 @@ import { Filter, Heart, MapPin } from 'lucide-react'
 import { fetchCompanions, sendCompanionRequest } from '../services/companionsService'
 import { useAuthStore } from '../state/authStore'
 import TopHeader from '../components/TopHeader'
+import DesktopHeader from '../components/DesktopHeader'
 import CompanionCard from '../components/CompanionCard'
 import LoadingSpinner from '../components/LoadingSpinner'
 import Button from '../components/Button'
@@ -60,9 +61,10 @@ const Companions = () => {
   return (
     <div className="min-h-screen">
       <TopHeader title="Find Companions" />
+      <DesktopHeader title="Find Travel Companions" />
       
       {/* Search and Filters */}
-      <div className="sticky top-16 z-30 bg-base-100 border-b border-base-200 p-4">
+      <div className="sticky top-16 lg:top-20 z-30 bg-base-100 border-b border-base-200 p-4 lg:px-6">
         <div className="flex gap-2 mb-3">
           <div className="flex-1">
             <input
@@ -161,7 +163,7 @@ const Companions = () => {
                 </Button>
               </div>
             ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4 md:gap-6">
                 {companions?.map((companion) => (
                   <CompanionCard
                     key={companion.id}
