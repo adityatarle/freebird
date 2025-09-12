@@ -1,0 +1,123 @@
+[
+  {
+    "id": "1",
+    "name": "Swiss Alps Adventure",
+    "destination": "Swiss Alps, Switzerland",
+    "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop",
+    "organizer": {
+      "username": "sara_travels",
+      "name": "Sara Wilson",
+      "avatar": "https://images.unsplash.com/photo-1494790108755-2616b612b567?w=150&h=150&fit=crop&crop=face"
+    },
+    "members": [
+      {
+        "username": "sara_travels",
+        "name": "Sara Wilson",
+        "avatar": "https://images.unsplash.com/photo-1494790108755-2616b612b567?w=150&h=150&fit=crop&crop=face",
+        "role": "organizer"
+      },
+      {
+        "username": "adventure_anna",
+        "name": "Anna Schmidt",
+        "avatar": "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?w=150&h=150&fit=crop&crop=face",
+        "role": "member"
+      },
+      {
+        "username": "mountain_mike",
+        "name": "Mike Anderson",
+        "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+        "role": "member"
+      }
+    ],
+    "maxMembers": 6,
+    "description": "Join us for an epic hiking adventure in the Swiss Alps! We'll explore beautiful trails, stay in mountain huts, and capture amazing photos.",
+    "travelDates": "2024-03-15 to 2024-03-22",
+    "budget": "€800-1200 per person",
+    "activities": ["hiking", "photography", "mountain climbing"],
+    "status": "open",
+    "created": "2024-01-10T09:00:00Z",
+    "polls": [
+      {
+        "id": "1",
+        "question": "Which trail should we prioritize?",
+        "options": [
+          { "text": "Matterhorn Base Trek", "votes": 2 },
+          { "text": "Jungfraujoch Railway", "votes": 1 },
+          { "text": "Eiger Trail", "votes": 0 }
+        ],
+        "created": "2024-01-12T10:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "name": "Tokyo Food Tour",
+    "destination": "Tokyo, Japan",
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=600&h=400&fit=crop",
+    "organizer": {
+      "username": "tokyo_foodie",
+      "name": "Yuki Tanaka",
+      "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
+    },
+    "members": [
+      {
+        "username": "tokyo_foodie",
+        "name": "Yuki Tanaka",
+        "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+        "role": "organizer"
+      },
+      {
+        "username": "culture_seeker",
+        "name": "Emma Chen",
+        "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+        "role": "member"
+      }
+    ],
+    "maxMembers": 4,
+    "description": "Discover the best street food and hidden restaurants in Tokyo! Local guide included.",
+    "travelDates": "2024-04-01 to 2024-04-08",
+    "budget": "¥50,000-80,000 per person",
+    "activities": ["food tours", "local experiences", "cultural sites"],
+    "status": "open",
+    "created": "2024-01-08T14:30:00Z",
+    "polls": []
+  },
+  {
+    "id": "3",
+    "name": "Santorini Sunset Photography",
+    "destination": "Santorini, Greece",
+    "image": "https://images.unsplash.com/photo-1539650116574-75c0c6d73636?w=600&h=400&fit=crop",
+    "organizer": {
+      "username": "solo_wanderer",
+      "name": "David Park",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+    },
+    "members": [
+      {
+        "username": "solo_wanderer",
+        "name": "David Park",
+        "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+        "role": "organizer"
+      }
+    ],
+    "maxMembers": 5,
+    "description": "Photography-focused trip to capture the most beautiful sunsets in Santorini. All skill levels welcome!",
+    "travelDates": "2024-05-20 to 2024-05-27",
+    "budget": "€600-900 per person",
+    "activities": ["photography", "sunset viewing", "wine tasting"],
+    "status": "open",
+    "created": "2024-01-05T16:45:00Z",
+    "polls": [
+      {
+        "id": "2",
+        "question": "Best time for sunset photography?",
+        "options": [
+          { "text": "Golden hour (1 hour before)", "votes": 1 },
+          { "text": "Blue hour (30 min after)", "votes": 0 },
+          { "text": "Both times", "votes": 0 }
+        ],
+        "created": "2024-01-07T12:00:00Z"
+      }
+    ]
+  }
+]
