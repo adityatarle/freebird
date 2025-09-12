@@ -1,0 +1,82 @@
+[
+  {
+    "id": "1",
+    "user": {
+      "username": "adventure_anna",
+      "name": "Anna Schmidt",
+      "avatar": "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?w=150&h=150&fit=crop&crop=face",
+      "age": 28,
+      "location": "Munich, Germany"
+    },
+    "destination": "Swiss Alps",
+    "travelDates": "2024-03-15 to 2024-03-22",
+    "travelStyle": "adventure",
+    "budget": "medium",
+    "interests": ["hiking", "photography", "local cuisine"],
+    "languages": ["German", "English", "French"],
+    "bio": "Love exploring mountains and capturing beautiful moments. Looking for hiking partners!",
+    "verified": true,
+    "rating": 4.8,
+    "tripCount": 12
+  },
+  {
+    "id": "2",
+    "user": {
+      "username": "beach_lover_mike",
+      "name": "Mike Johnson",
+      "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+      "age": 32,
+      "location": "Miami, FL"
+    },
+    "destination": "Maldives",
+    "travelDates": "2024-02-10 to 2024-02-17",
+    "travelStyle": "relaxation",
+    "budget": "high",
+    "interests": ["diving", "spa", "beach activities"],
+    "languages": ["English", "Spanish"],
+    "bio": "Professional diver looking for underwater adventure companions in paradise!",
+    "verified": true,
+    "rating": 4.9,
+    "tripCount": 8
+  },
+  {
+    "id": "3",
+    "user": {
+      "username": "culture_seeker",
+      "name": "Emma Chen",
+      "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+      "age": 26,
+      "location": "Vancouver, Canada"
+    },
+    "destination": "Tokyo",
+    "travelDates": "2024-04-01 to 2024-04-08",
+    "travelStyle": "cultural",
+    "budget": "medium",
+    "interests": ["food tours", "temples", "local experiences"],
+    "languages": ["English", "Mandarin", "Japanese"],
+    "bio": "Food enthusiast and culture lover. Let's explore Tokyo's hidden gems together!",
+    "verified": false,
+    "rating": 4.7,
+    "tripCount": 15
+  },
+  {
+    "id": "4",
+    "user": {
+      "username": "solo_wanderer",
+      "name": "David Park",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+      "age": 29,
+      "location": "Seoul, South Korea"
+    },
+    "destination": "Santorini",
+    "travelDates": "2024-05-20 to 2024-05-27",
+    "travelStyle": "photography",
+    "budget": "medium",
+    "interests": ["photography", "sunset viewing", "wine tasting"],
+    "languages": ["Korean", "English"],
+    "bio": "Photographer seeking travel companions for capturing beautiful sunsets and memories!",
+    "verified": true,
+    "rating": 4.6,
+    "tripCount": 20
+  }
+]

@@ -1,0 +1,77 @@
+[
+  {
+    "id": "1",
+    "user": {
+      "username": "sara_travels",
+      "avatar": "https://images.unsplash.com/photo-1494790108755-2616b612b567?w=150&h=150&fit=crop&crop=face",
+      "verified": true
+    },
+    "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=800&fit=crop",
+    "caption": "Hiking the Swiss Alps 🏔️ The most breathtaking views I've ever seen! Who wants to join me on my next adventure? #dreamtrip #switzerland #hiking",
+    "likes": 1284,
+    "comments": 127,
+    "location": "Swiss Alps, Switzerland",
+    "timestamp": "2024-01-15T10:30:00Z",
+    "tags": ["hiking", "mountains", "switzerland", "adventure"]
+  },
+  {
+    "id": "2",
+    "user": {
+      "username": "marco_explorer",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+      "verified": false
+    },
+    "image": "https://images.unsplash.com/photo-1539650116574-75c0c6d73636?w=800&h=800&fit=crop",
+    "caption": "Sunset in Santorini never gets old ✨ Planning to come back here with a group next summer. Anyone interested? #santorini #greece #sunset",
+    "likes": 892,
+    "comments": 64,
+    "location": "Santorini, Greece",
+    "timestamp": "2024-01-14T18:45:00Z",
+    "tags": ["sunset", "greece", "santorini", "grouptravel"]
+  },
+  {
+    "id": "3",
+    "user": {
+      "username": "tokyo_foodie",
+      "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+      "verified": true
+    },
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&h=800&fit=crop",
+    "caption": "Street food tour in Tokyo! 🍜 Found the most amazing ramen spot in Shibuya. Looking for a food buddy for my next Japan trip! #tokyo #foodie #ramen",
+    "likes": 2156,
+    "comments": 189,
+    "location": "Shibuya, Tokyo",
+    "timestamp": "2024-01-13T12:20:00Z",
+    "tags": ["food", "tokyo", "japan", "streetfood"]
+  },
+  {
+    "id": "4",
+    "user": {
+      "username": "desert_nomad",
+      "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+      "verified": false
+    },
+    "image": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&h=800&fit=crop",
+    "caption": "Camping under the stars in Sahara Desert 🌟 Life-changing experience! Who's ready for an adventure? #sahara #desert #camping #stars",
+    "likes": 743,
+    "comments": 92,
+    "location": "Sahara Desert, Morocco",
+    "timestamp": "2024-01-12T20:15:00Z",
+    "tags": ["desert", "morocco", "camping", "adventure"]
+  },
+  {
+    "id": "5",
+    "user": {
+      "username": "island_hopper",
+      "avatar": "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?w=150&h=150&fit=crop&crop=face",
+      "verified": true
+    },
+    "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=800&fit=crop",
+    "caption": "Crystal clear waters in Maldives 🏝️ Paradise found! Looking for travel companions for island hopping next month #maldives #paradise #islandlife",
+    "likes": 1567,
+    "comments": 203,
+    "location": "Maldives",
+    "timestamp": "2024-01-11T14:30:00Z",
+    "tags": ["maldives", "island", "paradise", "beach"]
+  }
+]
