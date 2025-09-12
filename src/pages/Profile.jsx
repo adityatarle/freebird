@@ -3,6 +3,7 @@ import { Settings, MapPin, Calendar, Camera, Users, Heart, Edit } from 'lucide-r
 import { useAuthStore } from '../state/authStore'
 import { useTravelStore } from '../state/travelStore'
 import TopHeader from '../components/TopHeader'
+import DesktopHeader from '../components/DesktopHeader'
 import Button from '../components/Button'
 import Card from '../components/Card'
 
@@ -47,7 +48,7 @@ const Profile = () => {
   ]
 
   const PostGrid = () => (
-    <div className="grid grid-cols-3 gap-1">
+    <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-8 gap-1 md:gap-2">
       {userPosts.map(post => (
         <div key={post.id} className="aspect-square relative group cursor-pointer">
           <img
@@ -170,6 +171,18 @@ const Profile = () => {
           </Button>
         }
       />
+      <DesktopHeader 
+        title="Profile"
+        actions={
+          <Button
+            variant="outline"
+            onClick={() => alert('Edit profile functionality')}
+          >
+            <Edit size={16} className="mr-2" />
+            Edit Profile
+          </Button>
+        }
+      />
       
       {/* Profile Header */}
       <div className="p-4">
@@ -201,7 +214,7 @@ const Profile = () => {
         <p className="text-sm mb-4">{user.bio}</p>
 
         {/* Stats */}
-        <div className="grid grid-cols-4 gap-4 mb-4">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-4">
           {stats.map(stat => (
             <div key={stat.label} className="text-center">
               <div className="text-lg font-bold">{stat.value}</div>
@@ -222,7 +235,7 @@ const Profile = () => {
       </div>
 
       {/* Tabs */}
-      <div className="sticky top-16 z-30 bg-base-100 border-b border-base-200">
+      <div className="sticky top-16 lg:top-20 z-30 bg-base-100 border-b border-base-200">
         <div className="flex">
           {tabs.map(tab => (
             <button

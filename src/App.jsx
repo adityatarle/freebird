@@ -5,6 +5,7 @@ import { useAuthStore } from './state/authStore'
 
 // Layout Components
 import BottomNavigation from './components/BottomNavigation'
+import DesktopNavigation from './components/DesktopNavigation'
 import TopHeader from './components/TopHeader'
 
 // Pages
@@ -46,20 +47,41 @@ function App() {
   return (
     <div className="min-h-screen bg-base-100">
       {/* Main App Layout */}
-      <div className="pb-16"> {/* Space for bottom navigation */}
-        <Routes>
-          <Route path="/" element={<Feed />} />
-          <Route path="/explore" element={<Explore />} />
-          <Route path="/companions" element={<Companions />} />
-          <Route path="/groups" element={<Groups />} />
-          <Route path="/wishlist" element={<Wishlist />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/settings" element={<Settings />} />
-        </Routes>
+      <div className="flex min-h-screen">
+        {/* Desktop Sidebar Navigation */}
+        <div className="hidden lg:flex lg:w-64 lg:flex-col lg:fixed lg:inset-y-0">
+          <div className="flex flex-col flex-grow pt-5 pb-4 overflow-y-auto bg-base-200 border-r border-base-300">
+            <div className="flex items-center flex-shrink-0 px-4">
+              <h1 className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                FreBud
+              </h1>
+            </div>
+            <nav className="mt-8 flex-1 px-2 space-y-1">
+              <DesktopNavigation />
+            </nav>
+          </div>
+        </div>
+
+        {/* Main Content */}
+        <div className="flex flex-col flex-1 lg:pl-64">
+          <div className="pb-16 lg:pb-0"> {/* Space for bottom navigation on mobile */}
+            <Routes>
+              <Route path="/" element={<Feed />} />
+              <Route path="/explore" element={<Explore />} />
+              <Route path="/companions" element={<Companions />} />
+              <Route path="/groups" element={<Groups />} />
+              <Route path="/wishlist" element={<Wishlist />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/settings" element={<Settings />} />
+            </Routes>
+          </div>
+        </div>
       </div>
 
-      {/* Bottom Navigation */}
-      <BottomNavigation />
+      {/* Mobile Bottom Navigation */}
+      <div className="lg:hidden">
+        <BottomNavigation />
+      </div>
 
       {/* Modals */}
       {showStoryModal && <StoryModal />}

@@ -73,63 +73,124 @@ const StoryModal = () => {
 
   return (
     <div className="fixed inset-0 bg-black z-50 flex items-center justify-center">
-      {/* Story Progress Bars */}
-      <div className="absolute top-4 left-4 right-4 z-10">
-        <div className="flex gap-1">
-          {stories.map((_, index) => (
-            <div key={index} className="flex-1 h-1 bg-white/30 rounded-full overflow-hidden">
-              <div
-                className="h-full bg-white transition-all duration-100"
-                style={{
-                  width: index < currentIndex ? '100%' : 
-                         index === currentIndex ? `${progress}%` : '0%'
-                }}
-              />
-            </div>
-          ))}
+      {/* Desktop Container */}
+      <div className="hidden lg:block w-full max-w-md mx-auto h-full relative">
+        {/* Story Progress Bars */}
+        <div className="absolute top-4 left-4 right-4 z-10">
+          <div className="flex gap-1">
+            {stories.map((_, index) => (
+              <div key={index} className="flex-1 h-1 bg-white/30 rounded-full overflow-hidden">
+                <div
+                  className="h-full bg-white transition-all duration-100"
+                  style={{
+                    width: index < currentIndex ? '100%' : 
+                           index === currentIndex ? `${progress}%` : '0%'
+                  }}
+                />
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
 
-      {/* Story Header */}
-      <div className="absolute top-8 left-4 right-4 z-10 flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <img
-            src={story.user.avatar}
-            alt={story.user.username}
-            className="w-8 h-8 rounded-full border-2 border-white"
-          />
-          <span className="text-white font-medium">{story.user.username}</span>
-          <span className="text-white/60 text-sm">
-            {new Date(story.timestamp).toLocaleTimeString([], { 
-              hour: '2-digit', 
-              minute: '2-digit' 
-            })}
-          </span>
+        {/* Story Header */}
+        <div className="absolute top-8 left-4 right-4 z-10 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <img
+              src={story.user.avatar}
+              alt={story.user.username}
+              className="w-8 h-8 rounded-full border-2 border-white"
+            />
+            <span className="text-white font-medium">{story.user.username}</span>
+            <span className="text-white/60 text-sm">
+              {new Date(story.timestamp).toLocaleTimeString([], { 
+                hour: '2-digit', 
+                minute: '2-digit' 
+              })}
+            </span>
+          </div>
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={handleClose}
+            className="text-white hover:bg-white/20"
+          >
+            <X size={20} />
+          </Button>
         </div>
-        <Button
-          variant="ghost"
-          size="sm"
-          onClick={handleClose}
-          className="text-white hover:bg-white/20"
+
+        {/* Story Image */}
+        <div 
+          className="w-full h-full flex items-center justify-center cursor-pointer bg-black rounded-lg overflow-hidden"
+          onClick={() => setIsPaused(!isPaused)}
+          onMouseDown={() => setIsPaused(true)}
+          onMouseUp={() => setIsPaused(false)}
         >
-          <X size={20} />
-        </Button>
+          <img
+            src={story.image}
+            alt="Story"
+            className="max-w-full max-h-full object-contain"
+          />
+        </div>
       </div>
 
-      {/* Story Image */}
-      <div 
-        className="w-full h-full flex items-center justify-center cursor-pointer"
-        onClick={() => setIsPaused(!isPaused)}
-        onMouseDown={() => setIsPaused(true)}
-        onMouseUp={() => setIsPaused(false)}
-        onTouchStart={() => setIsPaused(true)}
-        onTouchEnd={() => setIsPaused(false)}
-      >
-        <img
-          src={story.image}
-          alt="Story"
-          className="max-w-full max-h-full object-contain"
-        />
+      {/* Mobile Container */}
+      <div className="lg:hidden w-full h-full relative">
+        {/* Story Progress Bars */}
+        <div className="absolute top-4 left-4 right-4 z-10 safe-top">
+          <div className="flex gap-1">
+            {stories.map((_, index) => (
+              <div key={index} className="flex-1 h-1 bg-white/30 rounded-full overflow-hidden">
+                <div
+                  className="h-full bg-white transition-all duration-100"
+                  style={{
+                    width: index < currentIndex ? '100%' : 
+                           index === currentIndex ? `${progress}%` : '0%'
+                  }}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Story Header */}
+        <div className="absolute top-8 left-4 right-4 z-10 flex items-center justify-between safe-top">
+          <div className="flex items-center gap-3">
+            <img
+              src={story.user.avatar}
+              alt={story.user.username}
+              className="w-8 h-8 rounded-full border-2 border-white"
+            />
+            <span className="text-white font-medium">{story.user.username}</span>
+            <span className="text-white/60 text-sm">
+              {new Date(story.timestamp).toLocaleTimeString([], { 
+                hour: '2-digit', 
+                minute: '2-digit' 
+              })}
+            </span>
+          </div>
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={handleClose}
+            className="text-white hover:bg-white/20"
+          >
+            <X size={20} />
+          </Button>
+        </div>
+
+        {/* Story Image */}
+        <div 
+          className="w-full h-full flex items-center justify-center cursor-pointer"
+          onClick={() => setIsPaused(!isPaused)}
+          onTouchStart={() => setIsPaused(true)}
+          onTouchEnd={() => setIsPaused(false)}
+        >
+          <img
+            src={story.image}
+            alt="Story"
+            className="max-w-full max-h-full object-contain"
+          />
+        </div>
       </div>
 
       {/* Navigation Areas */}

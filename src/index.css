@@ -30,6 +30,28 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 640px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1536px) {
+  html {
+    font-size: 17px;
+  }
+}
+
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   line-height: 1.6;
@@ -339,6 +361,45 @@ body {
   opacity: 0;
   transform: translateY(-100%);
   transition: opacity 300ms, transform 300ms;
+}
+
+/* Responsive Spacing Utilities */
+.responsive-p {
+  @apply p-4 sm:p-5 md:p-6 lg:p-8;
+}
+
+.responsive-px {
+  @apply px-4 sm:px-5 md:px-6 lg:px-8;
+}
+
+.responsive-py {
+  @apply py-4 sm:py-5 md:py-6 lg:py-8;
+}
+
+.responsive-gap {
+  @apply gap-4 sm:gap-5 md:gap-6 lg:gap-8;
+}
+
+.responsive-space-y > * + * {
+  @apply mt-4 sm:mt-5 md:mt-6 lg:mt-8;
+}
+
+.responsive-text {
+  @apply text-sm sm:text-base md:text-lg lg:text-xl;
+}
+
+.responsive-heading {
+  @apply text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl;
+}
+
+/* Container Responsive Widths */
+.container-responsive {
+  @apply max-w-sm sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto;
+}
+
+/* Responsive Grid Gaps */
+.grid-responsive-gap {
+  @apply gap-2 sm:gap-3 md:gap-4 lg:gap-6 xl:gap-8;
 }
 
 /* Print Styles */

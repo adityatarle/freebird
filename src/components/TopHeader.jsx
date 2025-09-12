@@ -6,7 +6,7 @@ const TopHeader = ({ title = 'FreBud', showBack = false, actions }) => {
   const navigate = useNavigate()
   
   return (
-    <div className="sticky top-0 z-40 bg-base-100/80 backdrop-blur-md border-b border-base-200">
+    <div className="sticky top-0 z-40 bg-base-100/80 backdrop-blur-md border-b border-base-200 lg:hidden">
       <div className="flex items-center justify-between px-4 py-3">
         <div className="flex items-center gap-3">
           {showBack && (
