@@ -1,4 +1,4 @@
-import { Home, Search, Users, Heart, User, Settings, Plus } from 'lucide-react'
+import { Home, Users, Search, MessageCircle, Heart, User, Plus, Settings, LogOut, Package } from 'lucide-react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { useUIStore } from '../state/uiStore'
 import { useAuthStore } from '../state/authStore'
@@ -7,17 +7,20 @@ import Button from './Button'
 const DesktopNavigation = () => {
   const location = useLocation()
   const navigate = useNavigate()
-  const { showCreateGroup } = useUIStore()
-  const { user } = useAuthStore()
+  const { showCreatePost } = useUIStore()
+  const { user, logout } = useAuthStore()
   
   const navItems = [
     { path: '/', icon: Home, label: 'Home' },
-    { path: '/explore', icon: Search, label: 'Explore' },
-    { path: '/companions', icon: Users, label: 'Find Companions' },
-    { path: '/groups', icon: Users, label: 'Travel Groups' },
-    { path: '/wishlist', icon: Heart, label: 'Wishlist' },
+    { path: '/find-partner', icon: Users, label: 'Find Partner' },
+    { path: '/community', icon: Users, label: 'Community' },
+    { path: '/packages', icon: Package, label: 'Packages' },
+    { path: '/search', icon: Search, label: 'Search' },
+    { path: '/message', icon: MessageCircle, label: 'Message' },
+    { path: '/notification', icon: Heart, label: 'Notification' },
+    { path: '/new-post', icon: Plus, label: 'New Post' },
     { path: '/profile', icon: User, label: 'Profile' },
-    { path: '/settings', icon: Settings, label: 'Settings' }
+    { path: '/more', icon: Settings, label: 'More' }
   ]
   
   return (
@@ -47,34 +50,15 @@ const DesktopNavigation = () => {
         )
       })}
       
-      {/* Quick Actions */}
+      {/* Logout */}
       <div className="pt-4 mt-4 border-t border-base-300">
-        <Button
-          variant="outline"
-          fullWidth
-          className="mb-2"
-          onClick={showCreateGroup}
+        <button
+          onClick={logout}
+          className="group flex items-center px-3 py-2 text-sm font-medium rounded-lg transition-colors w-full text-left text-base-content hover:bg-base-300 hover:text-base-content"
         >
-          <Plus size={16} className="mr-2" />
-          Create Group
-        </Button>
-        
-        {/* User Profile Mini */}
-        <div className="flex items-center px-3 py-2 bg-base-300 rounded-lg">
-          <img
-            src={user?.avatar || 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face'}
-            alt={user?.name || 'User'}
-            className="w-8 h-8 rounded-full mr-3"
-          />
-          <div className="flex-1 min-w-0">
-            <p className="text-sm font-medium text-base-content truncate">
-              {user?.name || 'Demo User'}
-            </p>
-            <p className="text-xs text-base-content/60 truncate">
-              @{user?.username || 'demo'}
-            </p>
-          </div>
-        </div>
+          <LogOut size={20} className="mr-3 flex-shrink-0" />
+          Logout
+        </button>
       </div>
     </div>
   )
