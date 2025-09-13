@@ -1,171 +1,62 @@
-# FreBud - Travel Companion App
+# FreBud - Travel Social Network
 
-A mobile-first, Instagram-inspired travel app built with modern web technologies. FreBud helps travelers discover destinations, connect with fellow travelers, and plan group adventures.
+A modern, production-ready React.js application for connecting travelers and exploring destinations together. Built with the latest web technologies and designed with a mobile-first approach.
+
+![FreBud Logo](https://via.placeholder.com/200x80/6366f1/white?text=FreBud)
 
 ## 🌟 Features
 
-### 🏠 **Home Feed**
-- Instagram-style post cards with images, captions, and likes
-- Story-style horizontal scroll bar
-- Interactive engagement (likes, comments, bookmarks)
+### Core Features
+- **Home Feed** - Discover travel posts, stories, and destination recommendations
+- **Find Partner** - Connect with travel companions based on destinations and preferences
+- **Community** - Join travel communities and share experiences
+- **Messaging** - Real-time chat with travel buddies
+- **Profile Management** - Customize your travel profile and showcase trips
+- **Search** - Find places, people, and travel content
+- **Notifications** - Stay updated with likes, comments, and friend requests
 
-### 🔍 **Explore Destinations**
-- Beautiful destination grid with filtering
-- Search by location, budget, and category
-- Detailed destination information with ratings and activities
+### UI/UX Features
+- **Mobile-First Design** - Optimized for mobile devices with responsive layouts
+- **Dark/Light Theme** - Toggle between themes with persistent preferences
+- **Progressive Web App** - Installable on mobile devices with offline support
+- **Toast Notifications** - User-friendly feedback for all actions
+- **Loading States** - Smooth loading animations and skeleton screens
 
-### 👥 **Find Travel Companions**
-- Match with fellow travelers based on preferences
-- Filter by destination, travel style, and budget
-- Connect and send travel requests
+## 🛠️ Tech Stack
 
-### 🎯 **Travel Groups**
-- Create and join travel groups
-- Group planning with polls and decisions
-- Real-time member management
+### Frontend
+- **React 18** - Latest stable version with JSX
+- **Vite** - Fast build tool and dev server
+- **React Router v6** - Client-side routing
+- **Tailwind CSS** - Utility-first CSS framework
+- **DaisyUI** - Beautiful UI components for Tailwind
 
-### ❤️ **Wishlist**
-- Save favorite destinations and posts
-- Organize saved items by type
-- Plan trips from wishlist items
+### State Management & Data
+- **Zustand** - Lightweight state management with persistence
+- **TanStack Query** - Data fetching and caching (optional)
+- **Axios** - HTTP client for API calls
 
-### 👤 **Profile & Settings**
-- Comprehensive user profiles
-- Dark/light theme toggle
-- Multi-language support
-- Privacy controls
+### Development Tools
+- **ESLint** - Code linting and formatting
+- **Prettier** - Code formatting
+- **Vitest** - Unit testing framework
+- **React Testing Library** - Component testing utilities
 
-## 🚀 Tech Stack
-
-- **Frontend Framework**: React 18 + Vite
-- **Styling**: TailwindCSS + DaisyUI
-- **State Management**: Zustand with persistence
-- **Data Fetching**: TanStack Query
-- **Routing**: React Router v6
-- **Icons**: Lucide React
-- **PWA**: Vite PWA plugin with Workbox
-
-## 📱 Mobile-First Design
-
-- Responsive design optimized for mobile devices
-- Touch-friendly interactions
-- PWA support for native-like experience
-- Offline functionality
-- Installable on mobile devices
-
-## 🏗️ Architecture
-
-```
-src/
-├── assets/            # Images, logos
-├── components/        # Reusable UI components
-├── data/              # Static JSON mock data
-├── features/          # Feature-specific components
-│   ├── auth/          # Authentication
-│   ├── feed/          # Travel feed
-│   ├── explore/       # Destination discovery
-│   ├── companions/    # Travel buddy matching
-│   ├── groups/        # Group planning
-│   ├── wishlist/      # Saved items
-│   ├── profile/       # User profiles
-│   └── settings/      # App settings
-├── hooks/             # Custom React hooks
-├── pages/             # Route components
-├── services/          # API service layer (mock)
-├── state/             # Zustand stores
-├── utils/             # Helper functions
-├── App.jsx            # Main app component
-└── main.jsx           # App entry point
-```
-
-## 🎨 Design System
-
-### Color Palette
-- **Primary**: Blue (#3b82f6) - Main brand color
-- **Secondary**: Amber (#f59e0b) - Accent color
-- **Success**: Green (#10b981) - Success states
-- **Neutral**: Gray (#374151) - Text and borders
-
-### Typography
-- **Font Family**: Inter (Google Fonts)
-- **Responsive text scaling**
-- **Consistent hierarchy**
-
-### Components
-- Reusable UI components with consistent styling
-- Custom button variants and sizes
-- Card components with hover effects
-- Loading states and animations
-
-## 📊 Mock Data
-
-The app uses static JSON files for demonstration:
-
-- **Posts**: Travel posts with images, captions, likes
-- **Destinations**: Travel destinations with ratings, activities
-- **Users**: User profiles with travel preferences
-- **Stories**: Instagram-style stories
-- **Companions**: Travel buddy profiles
-- **Groups**: Travel group information
-
-## 🔄 State Management
-
-### Zustand Stores
-
-1. **Auth Store** (`authStore.js`)
-   - User authentication state
-   - Login/logout functionality
-   - Profile management
-
-2. **Travel Store** (`travelStore.js`)
-   - Wishlist management
-   - Saved destinations
-   - Group memberships
-   - Recent searches
-
-3. **UI Store** (`uiStore.js`)
-   - Theme preferences
-   - Modal states
-   - Navigation state
-   - Loading states
-
-## 🎯 Key Features Implementation
-
-### Instagram-Style Feed
-- Infinite scroll posts
-- Story bar with view tracking
-- Interactive engagement buttons
-- Image optimization
-
-### Travel Companion Matching
-- Preference-based filtering
-- Compatibility scoring
-- Connection requests
-- Profile viewing
-
-### Group Planning
-- Group creation workflow
-- Member management
-- Polling system
-- Activity planning
-
-### PWA Capabilities
-- Offline functionality
-- Install prompts
-- Background sync
-- Push notifications (ready)
+### Notifications & UI
+- **Sonner** - Beautiful toast notifications
+- **Lucide React** - Modern icon library
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js 16+ 
-- npm or yarn
+- Node.js 16.x or higher
+- npm or yarn package manager
 
 ### Installation
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/your-username/frebud.git
    cd frebud
    ```
 
@@ -174,137 +65,187 @@ The app uses static JSON files for demonstration:
    npm install
    ```
 
-3. **Start development server**
+3. **Set up environment variables**
+   ```bash
+   cp .env.example .env
+   ```
+
+4. **Start the development server**
    ```bash
    npm run dev
    ```
 
-4. **Open in browser**
-   ```
-   http://localhost:5173
-   ```
+5. **Open your browser**
+   Navigate to `http://localhost:5173`
 
-### Build for Production
-
-```bash
-npm run build
-npm run preview
-```
-
-## 🔐 Demo Credentials
-
-For testing the app, use these demo credentials:
-
+### Demo Credentials
 - **Email**: `demo@frebud.com`
 - **Password**: `password123`
 
-Or click the "Try Demo Account" button on the login page.
+## 📜 Available Scripts
 
-## 📱 PWA Installation
-
-### Mobile (iOS/Android)
-1. Open the app in your mobile browser
-2. Look for "Add to Home Screen" prompt
-3. Follow the installation instructions
-
-### Desktop (Chrome/Edge)
-1. Look for the install icon in the address bar
-2. Click "Install FreBud"
-3. The app will open as a standalone application
-
-## 🌐 Browser Support
-
-- Chrome 90+
-- Firefox 88+
-- Safari 14+
-- Edge 90+
-
-## 🎨 Customization
-
-### Themes
-The app supports light and dark themes with CSS custom properties:
-
-```css
-:root {
-  --color-primary: #3b82f6;
-  --color-secondary: #f59e0b;
-  --color-accent: #10b981;
-  /* ... more variables */
-}
+### Development
+```bash
+npm run dev          # Start development server
+npm run build        # Build for production
+npm run preview      # Preview production build locally
 ```
 
-### Adding New Features
-1. Create components in appropriate feature folders
-2. Add routes to `App.jsx`
-3. Update navigation in `BottomNavigation.jsx`
-4. Add mock data if needed
+### Code Quality
+```bash
+npm run lint         # Run ESLint
+npm run lint:fix     # Fix ESLint errors automatically
+npm test            # Run unit tests
+```
+
+### Deployment
+```bash
+npm run build       # Create optimized production build
+npm run preview     # Preview the production build
+```
+
+## 📁 Project Structure
+
+```
+src/
+├── assets/             # Static assets (images, icons)
+├── components/         # Reusable UI components
+│   ├── __tests__/     # Component tests
+│   ├── Button.jsx     # Button component
+│   ├── Card.jsx       # Card component
+│   └── ...
+├── pages/             # Route components
+│   ├── __tests__/     # Page tests
+│   ├── Feed.jsx       # Home feed page
+│   ├── FindPartner.jsx # Find travel partners
+│   ├── Community.jsx  # Community features
+│   ├── Message.jsx    # Chat interface
+│   ├── Profile.jsx    # User profiles
+│   └── ...
+├── state/             # Zustand stores
+│   ├── authStore.js   # Authentication state
+│   ├── travelStore.js # Travel-related state
+│   └── uiStore.js     # UI state and preferences
+├── services/          # API services and data fetching
+├── data/              # Mock data (JSON files)
+├── utils/             # Utility functions
+├── test/              # Test configuration
+├── App.jsx            # Main app component
+├── main.jsx           # App entry point
+└── index.css          # Global styles
+```
+
+## 🎨 Design System
+
+### Colors
+- **Primary**: Purple (`#6366f1`)
+- **Secondary**: Pink (`#ec4899`)
+- **Accent**: Blue (`#3b82f6`)
+
+### Components
+- **Buttons**: Multiple variants (primary, secondary, outline, ghost)
+- **Cards**: Flexible card component with hover effects
+- **Forms**: Styled inputs, selects, and textareas
+- **Navigation**: Responsive sidebar and bottom navigation
+
+### Responsive Breakpoints
+- **Mobile**: < 768px
+- **Tablet**: 768px - 1024px
+- **Desktop**: > 1024px
+
+## 🧪 Testing
+
+### Running Tests
+```bash
+npm test                # Run all tests
+npm test -- --watch    # Run tests in watch mode
+npm test Button         # Run specific test file
+```
+
+### Test Coverage
+- **Unit Tests**: Components and utilities
+- **Integration Tests**: Page components and user flows
+- **Form Validation**: Input validation and error handling
+
+## 🚢 Deployment
+
+### Vercel (Recommended)
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Deploy with default settings
+
+### Manual Build
+```bash
+npm run build
+# Upload the 'dist' folder to your hosting service
+```
+
+### Environment Variables for Production
+```bash
+VITE_APP_TITLE="FreBud"
+VITE_API_BASE_URL="https://your-api.com"
+```
 
 ## 🔧 Configuration
 
-### Environment Variables
-Create a `.env` file for custom configuration:
+### Tailwind CSS
+Custom configuration in `tailwind.config.js`:
+- DaisyUI theme customization
+- Custom color palette
+- Responsive utilities
 
-```env
-VITE_APP_NAME=FreBud
-VITE_APP_VERSION=1.0.0
-VITE_API_BASE_URL=https://api.frebud.com
-```
+### Vite Configuration
+Optimized build settings in `vite.config.js`:
+- PWA plugin configuration
+- Build optimization
+- Development server settings
 
-### PWA Configuration
-Modify `vite.config.js` for PWA settings:
+## 📱 PWA Features
 
-```javascript
-VitePWA({
-  registerType: 'autoUpdate',
-  includeAssets: ['favicon.ico', 'apple-touch-icon.png'],
-  manifest: {
-    name: 'FreBud - Travel Companion',
-    short_name: 'FreBud',
-    theme_color: '#3b82f6',
-    // ... more manifest options
-  }
-})
-```
+### Installation
+- Add to home screen on mobile devices
+- Native app-like experience
+- Offline functionality
 
-## 🚧 Future Enhancements
-
-- [ ] Real-time chat functionality
-- [ ] Map integration for destinations
-- [ ] Trip planning with itineraries
-- [ ] Social media sharing
-- [ ] Push notifications
-- [ ] Multi-language content
-- [ ] Currency conversion
-- [ ] Weather integration
-- [ ] Booking integrations
-- [ ] Travel document management
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
+### Service Worker
+- Cache static assets
+- Background sync (ready for implementation)
+- Push notifications (ready for implementation)
 
 ## 🤝 Contributing
 
 1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
 3. Commit your changes (`git commit -m 'Add amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📞 Support
+### Code Style
+- Use ESLint and Prettier configurations
+- Follow React best practices
+- Write tests for new features
+- Update documentation
 
-For support, email support@frebud.com or create an issue on GitHub.
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
-- [Unsplash](https://unsplash.com) for beautiful travel images
-- [Lucide](https://lucide.dev) for clean, consistent icons
-- [TailwindCSS](https://tailwindcss.com) for utility-first styling
-- [DaisyUI](https://daisyui.com) for component library
-- [React](https://reactjs.org) for the amazing framework
+- **Design Inspiration**: Modern travel and social media apps
+- **Icons**: Lucide React icon library
+- **UI Components**: DaisyUI component library
+- **Images**: Unsplash for demo images
+
+## 📞 Support
+
+For support and questions:
+- **Email**: support@frebud.com
+- **GitHub Issues**: [Create an issue](https://github.com/your-username/frebud/issues)
+- **Documentation**: [Wiki](https://github.com/your-username/frebud/wiki)
 
 ---
 
-**Made with ❤️ for travelers around the world**
+**FreBud** - *Travel.Sleep.Travel* 🌍✈️
 
-*FreBud v1.0.0 - Your ultimate travel companion*
+Made with ❤️ for travelers around the world.

@@ -10,14 +10,25 @@ import TopHeader from './components/TopHeader'
 
 // Pages
 import Feed from './pages/Feed'
+import FindPartner from './pages/FindPartner'
+import Community from './pages/Community'
+import CommunityPost from './pages/CommunityPost'
+import Packages from './pages/Packages'
+import Search from './pages/Search'
+import Message from './pages/Message'
+import Notification from './pages/Notification'
+import ProfileSimple from './pages/ProfileSimple'
+import More from './pages/More'
+import Login from './pages/Login'
+import Signup from './pages/Signup'
+
+// Keep old pages for backward compatibility
 import Explore from './pages/Explore'
 import Companions from './pages/Companions'
 import Groups from './pages/Groups'
 import Wishlist from './pages/Wishlist'
 import Profile from './pages/Profile'
 import Settings from './pages/Settings'
-import Login from './pages/Login'
-import Signup from './pages/Signup'
 
 // Modals and Overlays
 import StoryModal from './components/StoryModal'
@@ -67,11 +78,23 @@ function App() {
           <div className="pb-16 lg:pb-0"> {/* Space for bottom navigation on mobile */}
             <Routes>
               <Route path="/" element={<Feed />} />
+              <Route path="/find-partner" element={<FindPartner />} />
+              <Route path="/community" element={<Community />} />
+              <Route path="/community-post" element={<CommunityPost />} />
+              <Route path="/new-post" element={<CommunityPost />} />
+              <Route path="/packages" element={<Packages />} />
+              <Route path="/search" element={<Search />} />
+              <Route path="/message" element={<Message />} />
+              <Route path="/notification" element={<Notification />} />
+              <Route path="/profile" element={<ProfileSimple />} />
+              <Route path="/more" element={<More />} />
+              
+              {/* Keep old routes for backward compatibility */}
               <Route path="/explore" element={<Explore />} />
               <Route path="/companions" element={<Companions />} />
               <Route path="/groups" element={<Groups />} />
               <Route path="/wishlist" element={<Wishlist />} />
-              <Route path="/profile" element={<Profile />} />
+              <Route path="/profile-full" element={<Profile />} />
               <Route path="/settings" element={<Settings />} />
             </Routes>
           </div>

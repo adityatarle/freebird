@@ -16,6 +16,7 @@ export const useUIStore = create(
       showLoginModal: false,
       showSignupModal: false,
       showCreateGroupModal: false,
+      showCreatePostModal: false,
       showStoryModal: false,
       currentStory: null,
       
@@ -72,6 +73,14 @@ export const useUIStore = create(
 
       hideCreateGroup: () => {
         set({ showCreateGroupModal: false })
+      },
+
+      showCreatePost: () => {
+        set({ showCreatePostModal: true })
+      },
+
+      hideCreatePost: () => {
+        set({ showCreatePostModal: false })
       },
 
       showStory: (story) => {
